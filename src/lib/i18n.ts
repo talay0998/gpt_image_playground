@@ -2,7 +2,7 @@ import { useSyncExternalStore } from 'react'
 
 export type UiLang = 'zh' | 'ug'
 
-const STORAGE_KEY = 'talay_ui_lang'
+const STORAGE_KEY = 'app_ui_lang'
 const listeners = new Set<() => void>()
 
 const zh: Record<string, string> = {

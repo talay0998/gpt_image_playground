@@ -1,4 +1,4 @@
-const COOKIE_NAME = 'talay_auth'
+const COOKIE_NAME = 'app_auth'
 const PBKDF2_ITERATIONS = 100000
 const SESSION_DAYS = 7
 const MAX_FAILS = 5
