@@ -13,7 +13,8 @@
     {
       "binding": "gpt_image_playground_auth",
       "database_name": "gpt-image-playground-auth",
-      "database_id": "fcd77503-48a7-4d90-a0bc-087f5e000b67"
+      // 部署前请替换为你自己的 D1 database_id（wrangler d1 create gpt-image-playground-auth）
+      "database_id": "<your-d1-database-id>"
     }
   ],
   "ai": {

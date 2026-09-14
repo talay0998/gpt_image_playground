@@ -27,6 +27,10 @@
 
 ---
 
+> 🔧 **二次开发说明**：本仓库是 [GPT Image Playground](https://github.com/CookSleep/gpt_image_playground)（MIT）的**二次开发版本**，由 `alim-talay` 维护。在保留原项目版权与许可声明的前提下，新增了维吾尔语双语界面、登录鉴权、Cloudflare Workers AI 生图、国内生图服务商预置等功能，具体差异见 [FORK.md](./FORK.md)。
+
+---
+
 ## ❤️ 赞助商
 
 <table>
