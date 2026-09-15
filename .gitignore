@@ -5,3 +5,4 @@ dev-proxy.config.json
 .env.local
 .env.*.local
 gpt-image-config.json
+wrangler.local.jsonc

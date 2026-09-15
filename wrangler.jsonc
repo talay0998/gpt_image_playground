@@ -16,8 +16,8 @@
     {
       "binding": "gpt_image_playground_auth",
       "database_name": "gpt-image-playground-auth",
-      // 部署前设置环境变量 D1_DATABASE_ID=`wrangler d1 create gpt-image-playground-auth` 输出的 id
-      "database_id": "${D1_DATABASE_ID}"
+      // 部署前请替换为你的 D1 database_id（运行 `wrangler d1 create gpt-image-playground-auth` 获取）
+      "database_id": "REPLACE_WITH_YOUR_D1_DATABASE_ID"
     }
   ],
   "ai": {
