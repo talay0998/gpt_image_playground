@@ -1,14 +1,81 @@
 {
-  "customProviders": [],
+  "customProviders": [
+    {
+      "id": "chatanywhere",
+      "name": "ChatAnywhere 免费",
+      "template": "http-image",
+      "baseUrl": "https://api.chatanywhere.tech/v1",
+      "models": ["gpt-5-mini", "gpt-5", "gpt-4o-mini", "gpt-4o", "gpt-3.5-turbo", "deepseek-chat", "deepseek-v3.2"],
+      "submit": { "path": "images/generations", "method": "POST", "contentType": "json", "body": { "model": "$profile.model", "prompt": "$prompt", "n": "$params.n", "size": "$params.size" } }
+    },
+    {
+      "id": "openrouter-free",
+      "name": "OpenRouter 免费",
+      "template": "http-image",
+      "baseUrl": "https://openrouter.ai/api/v1",
+      "models": [
+        "nvidia/nemotron-3-super-120b-a12b:free",
+        "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "nvidia/nemotron-3.5-lightning:free",
+        "poolside/laguna-s-2.1:free",
+        "poolside/laguna-xs-2.1:free",
+        "cohere/north-mini-code:free",
+        "nex-agi/nex-n2.5-pro:free",
+        "thinkingmachines/inkling-small:free"
+      ],
+      "submit": { "path": "images/generations", "method": "POST", "contentType": "json", "body": { "model": "$profile.model", "prompt": "$prompt", "n": "$params.n", "size": "$params.size" } }
+    },
+    {
+      "id": "nvidia-nim",
+      "name": "NVIDIA NIM 免费",
+      "template": "http-image",
+      "baseUrl": "https://integrate.api.nvidia.com/v1",
+      "models": [
+        "nvidia/nemotron-3-super-120b-a12b",
+        "nvidia/nemotron-3-ultra-550b-a55b",
+        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+        "nvidia/nemotron-3.5-lightning-30b-a3b",
+        "google/gemma-4-31b-it",
+        "poolside/laguna-xs-2.1",
+        "z-ai/glm-5.3-flash"
+      ],
+      "submit": { "path": "images/generations", "method": "POST", "contentType": "json", "body": { "model": "$profile.model", "prompt": "$prompt", "n": "$params.n", "size": "$params.size" } }
+    }
+  ],
   "profiles": [
     {
-      "id": "example-openai",
-      "name": "示例配置",
-      "provider": "openai",
-      "baseUrl": "https://api.example.com/v1",
-      "model": "gpt-image-2.5-sunburst",
-      "apiMode": "images",
+      "id": "cf-flux",
+      "name": "Cloudflare Flux 免费",
+      "description": "Cloudflare Workers AI 免费生图（推荐）",
+      "provider": "cloudflare",
+      "baseUrl": "/",
+      "model": "flux-1-schnell",
       "isDefault": true
+    },
+    {
+      "id": "chatanywhere-free",
+      "name": "ChatAnywhere 免费",
+      "provider": "chatanywhere",
+      "baseUrl": "https://api.chatanywhere.tech/v1",
+      "apiKey": "<your-chatanywhere-key>",
+      "model": "gpt-5-mini"
+    },
+    {
+      "id": "openrouter-free",
+      "name": "OpenRouter 免费",
+      "provider": "openrouter-free",
+      "baseUrl": "https://openrouter.ai/api/v1",
+      "apiKey": "<your-openrouter-key>",
+      "model": "nvidia/nemotron-3-super-120b-a12b:free"
+    },
+    {
+      "id": "nvidia-free",
+      "name": "NVIDIA NIM 免费",
+      "provider": "nvidia-nim",
+      "baseUrl": "https://integrate.api.nvidia.com/v1",
+      "apiKey": "<your-nvidia-nim-key>",
+      "model": "nvidia/nemotron-3-super-120b-a12b"
     }
   ]
 }

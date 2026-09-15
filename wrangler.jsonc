@@ -3,6 +3,9 @@
   "name": "gpt-image-playground",
   "compatibility_date": "2026-05-07",
   "main": "worker/index.ts",
+  "routes": [
+    { "pattern": "img.talay.work", "custom_domain": true }
+  ],
   "assets": {
     "directory": "./dist",
     "not_found_handling": "single-page-application",
@@ -13,8 +16,8 @@
     {
       "binding": "gpt_image_playground_auth",
       "database_name": "gpt-image-playground-auth",
-      // 部署前请替换为你自己的 D1 database_id（wrangler d1 create gpt-image-playground-auth）
-      "database_id": "<your-d1-database-id>"
+      // 部署前设置环境变量 D1_DATABASE_ID=`wrangler d1 create gpt-image-playground-auth` 输出的 id
+      "database_id": "${D1_DATABASE_ID}"
     }
   ],
   "ai": {
